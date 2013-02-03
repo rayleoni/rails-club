@@ -1,3 +1,9 @@
+<div id= "container">
+<div id="header">
+	<h1>
+		<a href="index.html">Scout</a> </h1>
+</div>
+</br> 
 <h2>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -10,8 +16,9 @@
   <% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
-
+</br>
   <div><%= f.submit "Sign in" %></div>
+</br>
 <% end %>
 
 <%= render "devise/shared/links" %>

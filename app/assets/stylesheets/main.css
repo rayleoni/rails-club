@@ -18,14 +18,15 @@ white-space: normal;}
     width: 90px;}
 
 div#header h1 a {
-	    background: url("images/logo2.png") no-repeat scroll 0 0 transparent;
+	    background: url("logo2.png") no-repeat scroll 0 0 transparent;
 	    display: block;
 	    height: 28px; width:100px;
 	    transition: opacity 200ms ease 0s, transform 0s ease 0s;
 	}
 
 div.navigation {padding-top: 24px;
-	    position: relative;}
+	    position: relative;
+	}
 
 div.signin {float: right;
     display: block;
@@ -36,11 +37,13 @@ div.signin {float: right;
     padding-top: 19px}
 
 div#getstarted {margin-top: 10px;
-		background: url("images/banner2.png") repeat scroll 0 0 #84BBE5;
+		background: url("banner2.png") repeat scroll 0 0 #84BBE5;
 	    border-radius: 4px 4px 4px 4px;
 	    height: 300px;
 	    overflow: hidden;
 	    position: relative;}
+	
+#gsbutton{margin-left:75px; margin-top:210px}
 	
 div.box {margin-top: 40px;
 	    margin-left: auto; 

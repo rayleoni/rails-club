@@ -8,33 +8,33 @@
 <link rel="icon" type="image/ico" href="../../images/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../stylesheets/main.css"/>
 <link rel="image_src" type="image/png" href="../../images/placeholder.png"/>
-<link type="image/png" rel="image_src" href="../../images/logo.png" >
+<link type="image/png" rel="image_src" href="logo.png" >
 </head>
 
 <body>
 <div id= "container">
-	
 <div id="header">
 	<h1>
 		<a href="index.html">Scout</a> </h1>
 <div id="navigation">
-	<div class="signin">
-			<img src="../../images/login2.png" />
+	<div class="signin"> 
+	<%=link_to image_tag("login2.png", :border => 0), new_member_session_path, :method=> :get %>
 			</div> </div> </div>
 
-<div id="getstarted"> </div>
+<div id="getstarted"> 
+	<div id="gsbutton"> <%=link_to image_tag("getstartedbutton.png", :border => 0), new_member_registration_path, :method=> :get %> </div>
+ </div>
 
 <div id="moreinfo" class="box">
 	<div id="info">
 		<div class="why">
 			<span>Why you'll love using Scout </span> </div>
-			
 		<div class="part screeningprocess">
 			<div class="title">
 			<h2> A Thorough Screening Process </h2>
 			<p> We've developed a rigorous screening process to make sure our background checks are as accurate as possible. We conduct a full Social Security Number Trace and search for criminal records at the county, state, and federal level. </p> 
 			<p> If an individual is a Scout Badge owner, you can trust that he has a clean record according to the law. </p> </div>
-			<img width="406" height="210" src="images/screeningprocess.png">
+			<%=image_tag("screeningprocess.png", :alt => "Screening Process") %> 
 			</div>
 			
 		<div class="part shareit odd">
@@ -43,8 +43,7 @@
 					<h2>Share It Anywhere </h2>
 			<p>It's easy for you to share your approved Scout Badge anywhere, anytime. Share it on your listing, profile, or resume. </p>
 			<p> If a business supports Scout Integration, it's fast and secure for you to incorporate your Scout credentials. This bolsters your reputation and helps you attract more customers.</p> </div>
-			
-			<img width="406" height="210" src="images/shareit.png">
+			<%=image_tag("shareit.png", :alt => "Screening Process") %> 			
 			</div> </div>
 
 			
@@ -52,7 +51,7 @@
 			<div class="title">
 				<h2> Security is Our Priority </h2>
 				<p> Background checks deal with sensitive information. We work hard to ensure our security system is bullet-proof. Once you share your personal information with us, we make sure it never gets out. After you receive your badge, nobody else is able to use it. </p> </div>
-				<img width="406" height="210"src="images/security.png"> </div>
+			<%=image_tag("security.png", :alt => "Screening Process") %>  </div>
 					
 			<div class="part transparent odd">
 				<div class="inner">
@@ -60,7 +59,7 @@
 						<h2>Transparent and Liable </h2>
 							<p>We don't hide any of our policies and we promise to take  full responsibility for any issue that comes up. Scout makes sure to abide by state and federal laws, including the Fair Credit Reporting Act.</p> </div>
 					
-					<img width="406" height="210" src="images/transparent.png">
+			<%=image_tag("transparent.png", :alt => "Screening Process") %> 
 					</div> </div>
 					</div> </div>
 
@@ -71,17 +70,11 @@
 </body>
 </html>
 
-
-
 <% if member_signed_in? %>
 
 <h3>you have succesfully signed in</h3>
 <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
 
 <% else %>
-
-<h1> welcome to the rails community</h1>
-<%= link_to "Sign In", new_member_session_path, :method => :get %>
-<%= link_to "Sign up", new_member_registration_path, :method => :get %>
 
 <% end %>
